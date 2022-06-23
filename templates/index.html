@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+          .content {
+            width: 500px;
+            height: 500px;
+            background-color: orange;
+            color: black;
+          }
+          .username {
+            display: none;
+          }
+        </style>
+      </head>
+      <body>
+        <a href="./login">로그인!!!</a>
+        <div class="content">content</div>
+        <div class="username">어서오세요, {{ id }} 님</div>
+        <script>
+          const userId = "{{ id }}";
+
+          if (userId) {
+            $(".username").css("display", "flex");
+          }
+        </script>
+      </body>
+    </html>
+  </body>
+</html>
